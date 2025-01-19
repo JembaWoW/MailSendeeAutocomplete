@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: Mail Sendee Autocomplete
+## Author: Jemba
+## Notes: The autocomplete function when sending mail will include your known alts and previous sendees, as well as friend's and guild list.
+## Version: 1.0
+## SavedVariables: MailSendeeAutocomplete
+MailSendeeAutocomplete.lua
