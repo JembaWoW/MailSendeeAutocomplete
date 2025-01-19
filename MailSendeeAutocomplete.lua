@@ -41,7 +41,7 @@ function SendMailFrame_SendeeAutocomplete()
 	for name,bool in pairs( MailSendeeAutocomplete["alts"] ) do
 
 		if bool == true then
-			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) then
+			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) and name ~= UnitName("player") then
 				this:SetText(name);
 				this:HighlightText(textlen, -1);
 				return;
@@ -54,7 +54,7 @@ function SendMailFrame_SendeeAutocomplete()
 	for name,bool in pairs( MailSendeeAutocomplete["prevSendees"] ) do
 
 		if bool == true then
-			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) then
+			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) and name ~= UnitName("player") then
 				this:SetText(name);
 				this:HighlightText(textlen, -1);
 				return;
@@ -68,7 +68,7 @@ function SendMailFrame_SendeeAutocomplete()
 	if ( numFriends > 0 ) then
 		for i=1, numFriends do
 			name = GetFriendInfo(i);
-			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) then
+			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) and name ~= UnitName("player") then
 				this:SetText(name);
 				this:HighlightText(textlen, -1);
 				return;
@@ -81,7 +81,7 @@ function SendMailFrame_SendeeAutocomplete()
 	if ( numFriends > 0 ) then
 		for i=1, numFriends do
 			name = GetGuildRosterInfo(i);
-			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) then
+			if ( strfind(strupper(name), strupper(text), 1, 1) == 1 ) and name ~= UnitName("player") then
 				this:SetText(name);
 				this:HighlightText(textlen, -1);
 				return;
